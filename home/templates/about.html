@@ -1,0 +1,58 @@
+
+{% extends 'homebase.html' %}
+{% load static %}
+{% block title %} LapTopTVT {% endblock %}
+{% block description %} {{ setting.description}} {% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+
+<!--{% block sidebar %} {% include 'sidebar.html' %} {% endblock %}-->
+
+{% block body %}
+<!-- BREADCRUMB -->
+		<div id="breadcrumb" class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<div class="col-md-12">
+
+						<ul class="breadcrumb-tree">
+							<li><a href="/">Trang chủ</a></li>
+							<li class="active">Giới thiệu</li>
+						</ul>
+					</div>
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /BREADCRUMB -->
+
+		<!-- SECTION -->
+		<div class="section">
+    		<!-- container -->
+    		<div class="container">
+        		<!-- row -->
+        		<div class="row">
+            		<!-- Giới thiệu về EC Computer -->
+            		<div class="col-md-12">
+                		<h2>Giới Thiệu Về LapTopTVT</h2>
+                		<p><strong>Tên Công Ty:</strong> Công ty TNHH Dịch Vụ và Công Nghệ LapTopTVT</p>
+                		<p><strong>Showroom Hồ Chí Minh:</strong> Đâu đó ở thành phố Hồ Chí Minh</p>
+                		<p><strong>Lĩnh vực hoạt động:</strong> Kinh doanh các sản phẩm chuyên về máy tính, linh kiện gaming và các thiết bị công nghệ.</p>
+            		</div>
+        		</div>
+        		<!-- row -->
+        		<div class="row">
+            		<!-- Giá trị cốt lõi -->
+            		<div class="col-md-12">
+                		<h2>Giá Trị Cốt Lõi Của LapTopTVT</h2>
+                		<p><strong>Đam mê - Sáng tạo - Trách nhiệm là những giá trị mà LapTopTVT luôn theo đuổi để mang đến dịch vụ tốt nhất cho khách hàng.</strong></p>
+            		</div>
+        		</div>
+				<!-- /row -->
+    		</div>
+    		<!-- /container -->
+		</div>
+		<!-- /SECTION -->
+{% endblock %}

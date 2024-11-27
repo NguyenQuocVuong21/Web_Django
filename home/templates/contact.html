@@ -1,0 +1,95 @@
+
+{% extends 'homebase.html' %}
+{% load static %}
+{% block title %} LapTopTVT {% endblock %}
+{% block description %} {{ setting.description}} {% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+
+{% block body %}
+<!-- BREADCRUMB -->
+		<div id="breadcrumb" class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<div class="col-md-12">
+
+						<ul class="breadcrumb-tree">
+							<li><a href="/">Trang chủ</a></li>
+							<li class="active">Liên hệ</li>
+						</ul>
+					</div>
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /BREADCRUMB -->
+
+		<!-- SECTION -->
+		<div class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<!-- Thông tin liên hệ -->
+					<div class="col-md-4">
+						<div class="billing-details">
+							<div class="section-title">
+								<h3 class="title">Thông tin liên hệ</h3>
+								{% if messages %}
+									{% for message in messages %}
+										<div class="alert alert-{{message.tags}}" role="alert">
+											{{ message }}
+										</div>
+									{% endfor %}
+								{% endif %}
+							</div>
+							<form method="post">
+								{% csrf_token %}
+								{{ form.as_p }}
+								<input type="submit" class="btn btn-primary btn-block" value="Gửi tin nhắn">
+							</form>
+						</div>
+					</div>
+
+					<!-- Liên hệ -->
+					<div class="col-md-8 contact-details">
+						<div class="section-title">
+							<h3 class="title text-center">LIÊN HỆ</h3>
+						</div>
+						<p class="text-justify">
+							Công ty TNHH Dịch Vụ Và Công Nghệ LapTopTVT là một trong những doanh nghiệp hàng đầu trong lĩnh vực kinh doanh các sản phẩm công nghệ thông tin. Thành lập từ năm 2025, chúng tôi đã tạo được chỗ đứng vững chắc trên thị trường bán buôn, bán lẻ, trở thành đối tác của nhiều công ty lớn nhờ chiếm được tình cảm của hàng nghìn khách hàng trong và ngoài nước.
+						</p>
+						<p class="text-justify">
+							Công ty tin rằng khách hàng chính là nhân tố quan trọng cho phát triển của LapTopTVT. Vì vậy, mọi hoạt động kinh doanh của công ty luôn hướng tới mục tiêu tôn trọng và đảm bảo quyền lợi cho khách hàng, cung cấp sản phẩm và dịch vụ tốt nhất.
+						</p>
+						<p class="text-justify">
+							Để được phục vụ cũng như giải đáp mọi thắc mắc, quý khách vui lòng liên hệ với chúng tôi theo các thông tin sau:
+						</p>
+						<div class="row contact-info">
+							<!-- Showroom Hồ Chí Minh -->
+							<div class="col-md-6">
+								<h4>Showroom Hồ Chí Minh</h4>
+								<ul class="list-unstyled">
+									<li><strong>Địa chỉ:</strong> Đâu đó ở Hồ Chí Minh</li>
+									<li><strong>Điện thoại:</strong> 0908277125</li>
+									<li><strong>Email:</strong> qv7150233@gmail.com</li>
+								</ul>
+							</div>
+						</div>
+						<br>
+						<br>
+						<br>
+						<div class="text-center mt-4">
+							<a href="#" class="primary-btn order-submit">Place order</a>
+						</div>
+					</div>
+					<!-- /Liên hệ -->
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /SECTION -->
+{% endblock %}
